@@ -315,7 +315,7 @@
     position: absolute;
     top: -8px;
     right: -8px;
-    background: #ff4444;
+    background: var(--purple-primary);
     color: white;
     border-radius: 50%;
     width: 20px;
