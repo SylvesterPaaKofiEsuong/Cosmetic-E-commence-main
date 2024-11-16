@@ -1,14 +1,4 @@
-/* Auth Pages Shared Styles */
-.login-container,
-.register-container {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(135deg, #4B0082, #8A2BE2);
-    padding: 20px;
-}
-
+/* Auth Pages Styles */
 .login-box,
 .register-box {
     background: white;
@@ -71,7 +61,7 @@
 .register-btn {
     width: 100%;
     padding: 15px;
-    background: linear-gradient(45deg, #FFD700, #FFC800);
+    background: #D4AF37;
     border: none;
     border-radius: 25px;
     color: #4B0082;
@@ -111,12 +101,12 @@
 }
 
 .google-btn {
-    background: #DB4437;
+    background: #D4AF37;
     color: white;
 }
 
 .facebook-btn {
-    background: #4267B2;
+    background: #D4AF37;
     color: white;
 }
 
@@ -141,7 +131,7 @@
 
 .register-link a,
 .login-link a {
-    color: #FFD700;
+    color: #D4AF37;
     text-decoration: none;
     font-weight: bold;
 }
@@ -180,11 +170,12 @@
     background: none;
 }
 
+
 /* Image side styling */
 .image-side {
     flex: 1;
     position: relative;
-    background-image: url('images/beauty haven.jpg'); /* Update with your image path */
+    background-image: url('../images/beauty\ haven.jpg');
     background-size: cover;
     background-position: center;
     display: none; /* Hidden on mobile by default */
@@ -202,7 +193,7 @@
 .image-content {
     position: relative;
     z-index: 1;
-    color: white;
+    color: #FFD700;
     padding: 40px;
     text-align: center;
     display: flex;

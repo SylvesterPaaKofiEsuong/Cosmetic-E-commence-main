@@ -26,6 +26,24 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    let resizeTimer;
+    window.addEventListener('resize', function() {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(function() {
+            if (window.innerWidth > 992) {
+                mobileToggle.classList.remove('active');
+                navList.classList.remove('active');
+                body.style.overflow = '';
+                
+                // Reset all mega menus
+                document.querySelectorAll('.mega-menu').forEach(menu => {
+                    menu.classList.remove('active');
+                });
+            }
+        }, 250);
+    });
+});
+
     // Search Bar Autocomplete
     const searchInput = document.querySelector('.search-bar input');
     const searchResults = document.createElement('div');
@@ -167,7 +185,7 @@ document.addEventListener('DOMContentLoaded', function() {
         };
         // Update prices throughout the site
     }
-});
+
 
 
 document.addEventListener('DOMContentLoaded'), function() {
