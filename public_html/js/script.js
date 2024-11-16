@@ -347,30 +347,54 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
-
-// Optional: Add parallax effect to floating elements
-const floatingElements = document.querySelectorAll('.floating-element');
-window.addEventListener('mousemove', (e) => {
-    const x = e.clientX / window.innerWidth;
-    const y = e.clientY / window.innerHeight;
+  // Hero Section Animations
+  document.addEventListener('DOMContentLoaded', () => {
+      // Animate floating elements
+      const floatingElements = document.querySelectorAll('.floating-element');
     
-    floatingElements.forEach(element => {
-        const speed = 20;
-        const xOffset = (x - 0.5) * speed;
-        const yOffset = (y - 0.5) * speed;
+      floatingElements.forEach(element => {
+          element.style.animationDuration = `${Math.random() * 2 + 4}s`;
+      });
+
+      // Smooth scroll for CTA buttons
+      const ctaButtons = document.querySelectorAll('.cta-primary, .cta-secondary');
+    
+      ctaButtons.forEach(button => {
+          button.addEventListener('click', (e) => {
+              e.preventDefault();
+              const target = button.getAttribute('href');
+              if (target) {
+                  document.querySelector(target).scrollIntoView({
+                      behavior: 'smooth'
+                  });
+              }
+          });
+      });
+
+      // Add hover effect for feature items
+      const featureItems = document.querySelectorAll('.feature-item');
+    
+      featureItems.forEach(item => {
+          item.addEventListener('mouseenter', () => {
+              item.style.transform = 'translateY(-5px)';
+              item.style.transition = 'transform 0.3s ease';
+          });
         
-        element.style.transform = `translate(${xOffset}px, ${yOffset}px)`;
-    });
-});
+          item.addEventListener('mouseleave', () => {
+              item.style.transform = 'translateY(0)';
+          });
+      });
+  });
 
-// Optional: Add scroll reveal effect
-window.addEventListener('scroll', () => {
-    const heroSection = document.querySelector('.hero-section');
-    const scrollPosition = window.scrollY;
+  // Optional: Add parallax effect to floating elements
+  window.addEventListener('mousemove', (e) => {
+      const floatingElements = document.querySelectorAll('.floating-element');
     
-    if (scrollPosition > 50) {
-        heroSection.style.opacity = Math.max(1 - scrollPosition / 500, 0);
-    } else {
-        heroSection.style.opacity = 1;
-    }
-});
+      floatingElements.forEach(element => {
+          const speed = element.getAttribute('data-speed') || 0.05;
+          const x = (window.innerWidth - e.pageX * speed) / 100;
+          const y = (window.innerHeight - e.pageY * speed) / 100;
+        
+          element.style.transform = `translateX(${x}px) translateY(${y}px)`;
+      });
+  });

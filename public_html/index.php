@@ -16,38 +16,68 @@
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="floating-elements">
-            <div class="floating-element element-1">🌸</div>
-            <div class="floating-element element-2">✨</div>
-            <div class="floating-element element-3">🌺</div>
+            <div class="floating-element element-1">✨</div>
+            <div class="floating-element element-2">🌿</div>
+            <div class="floating-element element-3">💫</div>
+            <div class="floating-element element-4">🌸</div>
         </div>
-        
+    
         <div class="hero-content">
             <div class="hero-text">
-                <h1 class="hero-title">Discover Your Natural Beauty</h1>
-                <p class="hero-subtitle">Transform your skincare routine with our premium collection of natural and organic beauty products. Embrace the power of nature for radiant, healthy skin.</p>
+                <span class="hero-badge">Premium Beauty</span>
+                <h1 class="hero-title">Elevate Your Beauty Routine</h1>
+                <p class="hero-subtitle">Experience luxury skincare with our curated collection of premium beauty essentials. Clean, effective, and naturally derived ingredients for your daily glow.</p>
                 <div class="cta-buttons">
-                    <button class="cta-primary">Shop Now</button>
-                    <button class="cta-secondary">Learn More</button>
+                    <button class="cta-primary">Shop Collection <i class="fas fa-arrow-right"></i></button>
+                    <button class="cta-secondary">View Deals</button>
+                </div>
+                <div class="trust-badges">
+                    <span><i class="fas fa-star"></i> 4.9/5 Customer Rating</span>
+                    <span><i class="fas fa-check-circle"></i> 100% Authentic</span>
                 </div>
             </div>
-            
+        
             <div class="hero-image">
-                <img src="images/pics-resize8.png/600x800" alt="Natural Beauty Products">
+                <div class="image-wrapper">
+                    <img src="images/pics-resize8.png/600x800" alt="Premium Beauty Products">
+                    <div class="floating-card">
+                        <div class="card-content">
+                            <span class="discount-tag">20% OFF</span>
+                            <p>On Your First Purchase</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
         <div class="hero-features">
             <div class="feature-item">
                 <i class="fas fa-leaf"></i>
-                <span>100% Natural</span>
+                <div class="feature-text">
+                    <strong>100% Natural</strong>
+                    <span>Organic Ingredients</span>
+                </div>
             </div>
             <div class="feature-item">
                 <i class="fas fa-heart"></i>
-                <span>Cruelty Free</span>
+                <div class="feature-text">
+                    <strong>Cruelty Free</strong>
+                    <span>Ethically Made</span>
+                </div>
             </div>
             <div class="feature-item">
                 <i class="fas fa-truck"></i>
-                <span>Free Shipping</span>
+                <div class="feature-text">
+                    <strong>Free Shipping</strong>
+                    <span>Orders Over $50</span>
+                </div>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-undo"></i>
+                <div class="feature-text">
+                    <strong>Easy Returns</strong>
+                    <span>30-Day Guarantee</span>
+                </div>
             </div>
         </div>
     </section>
