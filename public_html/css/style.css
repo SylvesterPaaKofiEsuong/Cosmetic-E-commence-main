@@ -374,7 +374,7 @@
 .hero-section {
     position: relative;
     padding: 80px 0;
-    background: linear-gradient(135deg, #fff5f5 0%, #fff 100%);
+    background: linear-gradient(135deg, var(--gray-light) 0%, var(--white) 100%);
     overflow: hidden;
 }
 
@@ -410,8 +410,8 @@
 
 .hero-badge {
     display: inline-block;
-    background: #ff6b6b;
-    color: white;
+    background: var(--purple-primary);
+    color: var(--white);
     padding: 8px 16px;
     border-radius: 20px;
     font-size: 0.9rem;
@@ -427,13 +427,13 @@
 .hero-title {
     font-size: 3.5rem;
     margin-bottom: 20px;
-    color: #2d3436;
+    color: var(--purple-dark);
     line-height: 1.2;
 }
 
 .hero-subtitle {
     font-size: 1.1rem;
-    color: #636e72;
+    color: var(--gray-dark);
     margin-bottom: 30px;
     line-height: 1.6;
 }
@@ -452,15 +452,24 @@
 }
 
 .cta-primary {
-    background: #ff6b6b;
-    color: white;
+    background: var(--purple-primary);
+    color: var(--white);
     border: none;
 }
 
 .cta-secondary {
     background: transparent;
-    border: 2px solid #ff6b6b;
-    color: #ff6b6b;
+    border: 2px solid var(--purple-primary);
+    color: var(--purple-primary);
+}
+
+.cta-primary:hover {
+    background: var(--purple-dark);
+}
+
+.cta-secondary:hover {
+    border-color: var(--gold-primary);
+    color: var(--gold-primary);
 }
 
 .cta-primary:hover, .cta-secondary:hover {
@@ -471,13 +480,17 @@
 .trust-badges {
     display: flex;
     gap: 20px;
-    color: #636e72;
+    color: var(--gray-dark);
 }
 
 .trust-badges span {
     display: flex;
     align-items: center;
     gap: 8px;
+}
+
+.trust-badges i {
+    color: var(--gold-primary);
 }
 
 .image-wrapper {
@@ -495,7 +508,7 @@
     position: absolute;
     bottom: 30px;
     right: -30px;
-    background: white;
+    background: var(--white);
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
@@ -505,7 +518,7 @@
 .discount-tag {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #ff6b6b;
+    color: var(--purple-primary);
 }
 
 .hero-features {
@@ -525,7 +538,7 @@
 
 .feature-item i {
     font-size: 1.5rem;
-    color: #ff6b6b;
+    color: var(--gold-primary);
 }
 
 .feature-text {
@@ -534,12 +547,20 @@
 }
 
 .feature-text strong {
-    color: #2d3436;
+    color: var(--purple-primary);
 }
 
 .feature-text span {
     font-size: 0.9rem;
-    color: #636e72;
+    color: var(--gray-dark);
+}
+
+.hero-features .feature-item:hover i {
+    color: var(--gold-light);
+}
+
+.hero-features .feature-item:hover strong {
+    color: var(--purple-dark);
 }
 
 @keyframes float {
@@ -581,22 +602,57 @@
 
 
 /*footer*/
+  /* Newsletter Section */
+  .newsletter-section {
+      background-color: var(--purple-dark);
+      padding: 40px 0;
+      color: var(--white);
+  }
 
-/* Newsletter Section */
-.newsletter-section {
-    background-color: var(--purple-dark);
-    padding: 40px 0;
-    color: var(--white);
-}
+  .newsletter-content {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 30px;
+  }
 
-.newsletter-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 30px;
-}
+  .newsletter-text {
+      text-align: left;
+  }
 
-.newsletter-text h3 {
+  .newsletter-text h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: var(--gold-primary);
+  }
+
+  .newsletter-form {
+      flex: 0 0 500px;
+  }
+
+  .newsletter-form .form-group {
+      display: flex;
+      gap: 10px;
+  }
+
+  /* Keep the rest of your existing newsletter styles */
+
+  @media (max-width: 768px) {
+      .newsletter-content {
+          flex-direction: column;
+          align-items: stretch;
+      }
+
+      .newsletter-text {
+          text-align: center;
+      }
+
+      .newsletter-form {
+          flex: 1;
+          width: 100%;
+      }
+  }
+  .newsletter-text h3 {
     font-size: 1.5rem;
     margin-bottom: 10px;
     color: var(--gold-primary);
