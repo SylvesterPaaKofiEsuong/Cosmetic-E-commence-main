@@ -72,7 +72,7 @@
             </li>
             <li class="nav-item">
                 <a href="makeup.php">Makeup</a>
-                <div class="mega-menu">
+                <div class="mega-menu" style="left: 17.984px; min-width: 250px;">
                     <div class="mega-menu-column">
                         <h3>Face</h3>
                         <ul>
