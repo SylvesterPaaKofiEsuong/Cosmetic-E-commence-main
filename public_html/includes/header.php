@@ -9,6 +9,7 @@
             <div class="top-right">
                 <a href="#"><i class="fas fa-map-marker-alt"></i> Store Locator</a>
                 <select class="currency-selector">
+                    <option value="GHS">GHS</option>
                     <option value="USD">USD</option>
                     <option value="EUR">EUR</option>
                     <option value="GBP">GBP</option>
