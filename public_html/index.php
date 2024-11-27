@@ -9,7 +9,7 @@
     <link rel="icon" type="image/png" href="images/Favicon1.png" sizes="32x32">
 </head>
 <body>
-    <!-- Header and Navigation -->
+    <!-- Header -->
     <?php 
     include './includes/header.php'; 
     ?>
