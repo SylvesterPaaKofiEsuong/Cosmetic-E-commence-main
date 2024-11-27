@@ -209,15 +209,14 @@ document.addEventListener('DOMContentLoaded'), function() {
         });
     }
 
-    // Back to Top Button
-    const backToTopButton = document.getElementById('back-to-top');
+    document.addEventListener('DOMContentLoaded', function() {
+        const backToTopButton = document.getElementById('back-to-top');
     
-    if (backToTopButton) {
         window.addEventListener('scroll', function() {
             if (window.pageYOffset > 300) {
-                backToTopButton.classList.add('visible');
+                backToTopButton.classList.add('show');
             } else {
-                backToTopButton.classList.remove('visible');
+                backToTopButton.classList.remove('show');
             }
         });
 
@@ -227,8 +226,7 @@ document.addEventListener('DOMContentLoaded'), function() {
                 behavior: 'smooth'
             });
         });
-    }
-
+    });
     // Social Media Share Links
     const socialLinks = document.querySelectorAll('.social-link');
     socialLinks.forEach(link => {
