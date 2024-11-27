@@ -293,7 +293,7 @@
     left: 30%;
     transform: translateX(-50%);
     top: 100%;
-    width: 600px;
+    width: 400px;
     background: var(--white);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     opacity: 0;
