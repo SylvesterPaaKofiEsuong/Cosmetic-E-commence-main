@@ -414,3 +414,55 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
           element.style.transform = `translateX(${x}px) translateY(${y}px)`;
       });
   });
+
+
+
+/*FOR SHOP CATEGORY*/
+    (function() {
+        var slider = document.querySelector('.product-slider');
+        var slides = document.querySelectorAll('.product-slide');
+        var prevBtn = document.querySelector('.slider-btn-prev');
+        var nextBtn = document.querySelector('.slider-btn-next');
+
+        var currentPosition = 0;
+        var slidesToShow = 3;
+        var totalSlides = slides.length;
+
+        function showSlide(position) {
+            // Determine slides to show based on screen width
+            slidesToShow = window.innerWidth > 768 ? 3 : (window.innerWidth > 480 ? 2 : 1);
+            
+            // Calculate the maximum position to prevent overscrolling
+            var maxPosition = Math.max(0, totalSlides - slidesToShow);
+            
+            // Ensure position stays within bounds
+            currentPosition = Math.min(Math.max(position, 0), maxPosition);
+            
+            // Calculate the translation based on slide width and gap
+            var slideWidth = slides[0].offsetWidth;
+            var gap = 20; // from CSS gap
+            var translation = -(currentPosition * (slideWidth + gap));
+            
+            slider.style.transform = 'translateX(' + translation + 'px)';
+        }
+
+        // Next slide functionality
+        nextBtn.addEventListener('click', function() {
+            showSlide(currentPosition + 1);
+        });
+
+        // Previous slide functionality
+        prevBtn.addEventListener('click', function() {
+            showSlide(currentPosition - 1);
+        });
+
+        // Initial setup and responsiveness
+        function handleResize() {
+            showSlide(currentPosition);
+        }
+
+        window.addEventListener('resize', handleResize);
+        
+        // Initial call to set up slider
+        handleResize();
+    })();

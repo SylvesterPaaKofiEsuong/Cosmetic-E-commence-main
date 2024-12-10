@@ -83,14 +83,49 @@
         </div>
     </section>
 
-    <!-- Featured Categories -->
-    <section class="featured-categories">
-        <h2>Shop By Category</h2>
-        <div class="category-grid">
-            <div class="category-card">
-                <img src="images/skincare.jpg" alt="Skincare">
-                <h3>Skincare</h3>
-                <a href="skincare.php">Explore</a>
+   
+
+<section class="featured-categories">
+        <h1>Shop by Category</h1>
+        <h2>Makeup</h2>
+        
+        <div class="product-slider-container">
+            <button class="slider-btn slider-btn-prev">&lt;</button>
+            <div class="product-slider">
+                <div class="product-slide">
+                    <img src="images/cosmetic-products-makeup-brushes-black-background (1).jpg" alt="Lipstick">
+                    <div class="product-details">
+                        <div class="product-name">Classic Red Lipstick</div>
+                        <div class="product-price">$19.99</div>
+                    </div>
+                </div>
+                <div class="product-slide">
+                    <img src="https://via.placeholder.com/300x300?text=Foundation" alt="Foundation">
+                    <div class="product-details">
+                        <div class="product-name">Matte Foundation</div>
+                        <div class="product-price">$34.50</div>
+                    </div>
+                </div>
+                <div class="product-slide">
+                    <img src="https://via.placeholder.com/300x300?text=Eyeshadow" alt="Eyeshadow">
+                    <div class="product-details">
+                        <div class="product-name">Shimmer Eyeshadow Palette</div>
+                        <div class="product-price">$29.99</div>
+                    </div>
+                </div>
+                <div class="product-slide">
+                    <img src="https://via.placeholder.com/300x300?text=Blush" alt="Blush">
+                    <div class="product-details">
+                        <div class="product-name">Natural Blush</div>
+                        <div class="product-price">$22.00</div>
+                    </div>
+                </div>
+            </div>
+            <button class="slider-btn slider-btn-next">&gt;</button>
+        </div>
+    </section> 
+           
+         <!--<a href="skincare.php">Explore</a>
             </div>
             <div class="category-card">
                 <img src="images/makeup.jpg" alt="Makeup">
@@ -107,7 +142,7 @@
                 <h3>Fragrance</h3>
                 <a href="fragrance.php">Explore</a>
             </div>
-        </div>
+        </div> -->
     </section>
 
     <!-- Best Sellers -->
