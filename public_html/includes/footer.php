@@ -12,7 +12,7 @@
                     <div class="form-group">
                         <input type="email" id="newsletter-email" placeholder="Enter your email address">
                         <button type="submit">
-                            <span>Subscribe</span>
+                            <span>Subscrib</span>
                             <i class="fas fa-paper-plane"></i>
                         </button>
                     </div>
